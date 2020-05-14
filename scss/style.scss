@@ -1,0 +1,75 @@
+@import 'variables.scss';
+
+%link_height {
+    height: 30px;
+    width: 100%;
+}
+
+@mixin border_radius ($x,$y) {
+    border-radius: 0 10px 0 0;
+}
+
+
+body {
+    margin: 0;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100px;
+        position: absolute;
+        left: -96px;
+        top: 0;
+        
+        li {
+            background-color: $bg_color;
+            transition: margin-left .4s;
+            padding-left: 30px;
+            @extend %link_height;
+            a {
+                @extend %link_height;
+                color: #ffffff;
+                text-decoration: none;
+                font-family: "DM Mono";
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            i {
+                margin: 0 10px;
+            }
+            &:hover {
+                margin-left: 40px;
+            }
+            &.one {
+                @include border_radius(10px, 0);
+                &:hover {
+                    margin-left: 50px;
+                    @include border_radius(0, 0)
+                }
+            }
+
+            &.two:hover {
+                margin-left: 60px;
+            }
+
+            &.three:hover{
+                margin-left: 80px;
+            }
+
+            &.four:hover {
+                margin-left: 60px;
+            }
+            &.five {
+                @include border_radius(10px, 0);
+                &:hover {
+                    margin-left: 75px;
+                    @include border_radius(0, 0)
+                }
+            }
+        }
+    }
+    button {
+        margin-left: 40px;
+    }
+}
