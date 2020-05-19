@@ -9,70 +9,39 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="app">
-
-    <nav v-if="showNav">
-      <ul>
-        <li class="one">
-          <a href="#">
-            <span>{{nav.one}}</span>
-            <i class="fa fa-home"></i>
-          </a>
-        </li>
-        <li class="two">
-          <a href="#">
-            <span>{{nav.two}}</span>
-            <i class="fa fa-book"></i>
-          </a>
-        </li>
-        <li class="three">
-          <a href="#">
-            <span>{{nav.three}}</span>
-            <i class="fa fa-photo"></i>
-          </a>
-        </li>
-        <li class="four">
-          <a href="#">
-            <span>{{nav.four}}</span>
-            <i class="fa fa-archive"></i>
-          </a>
-        </li>
-        <li class="five">
-          <a href="#">
-            <span>{{nav.five}}</span>
-            <i class="fa fa-phone"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <button v-on:click="toggleNav">TOGGLE NAV</button>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script>
-    var app = new Vue ({
-      el: "#app",
-      data: {
-        showNav: true,
-        nav: {
-          one: "Home",
-          two: "About",
-          three: "Gallery",
-          four: "Store",
-          five: "Contact"
-        }
-      },
-      methods: {
-        toggleNav: function() {
-          if (this.showNav) {
-            this.showNav = false;
-          }
-          else {
-            this.showNav = true;
-          }
-        }
-      }
-    })
-  </script>
+  <nav v-if="showNav">
+    <ul>
+      <li class="one">
+        <a href="#">
+          <span>Home</span>
+          <i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li class="two">
+        <a href="#">
+          <span>About</span>
+          <i class="fa fa-book"></i>
+        </a>
+      </li>
+      <li class="three">
+        <a href="#">
+          <span>Gallery</span>
+          <i class="fa fa-photo"></i>
+        </a>
+      </li>
+      <li class="four">
+        <a href="#">
+          <span>Store</span>
+          <i class="fa fa-archive"></i>
+        </a>
+      </li>
+      <li class="five">
+        <a href="#">
+          <span>Contact</span>
+          <i class="fa fa-phone"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </body>
 </html>
